@@ -1,8 +1,9 @@
+/**
+ * Addition % 2
+ */
 function add() {
-  const [ x, y, ...rest ] = arguments
-  if (arguments.length > 2)
-    return add(add(x, y), ...rest)
-  return (x + y) % 2
+  const [...addends] = arguments
+  return addends.reduce((acc, addend) => acc + addend) % 2
 }
 
 function multiply(x, y) {
